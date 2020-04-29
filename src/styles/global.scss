@@ -1,0 +1,14 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: rgb(255, 0, 0);
+
+html {
+  font-family: "Font Name", sans-serif !important;
+  background-color: rgb(95, 95, 95);
+}
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+}
+p {
+  color: rgb(0, 0, 0);
+}

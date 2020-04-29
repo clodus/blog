@@ -16,9 +16,16 @@ import Img from "gatsby-image"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      mobileImage: file(relativePath: { eq: "clodus-xs.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      desktopImage: file(relativePath: { eq: "clodus.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +33,22 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Img
+      fadeIn={true}
+      durationFadeIn={5000}
+      fluid={[
+        data.mobileImage.childImageSharp.fluid,
+        {
+          ...data.desktopImage.childImageSharp.fluid,
+          media: `(min-width: 768px)`,
+        },
+      ]}
+      alt="Clodus"
+      draggable={false}
+      loading="auto"
+    />
+  )
 }
 
 export default Image
