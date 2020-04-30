@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f20e0efb-ae1e-492f-a01e-b6f29c85487f/deploy-status)](https://app.netlify.com/sites/clodus/deploys)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
