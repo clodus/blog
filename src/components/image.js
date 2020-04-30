@@ -36,7 +36,7 @@ const Image = () => {
   return (
     <Img
       fadeIn={true}
-      durationFadeIn={5000}
+      durationFadeIn={500}
       fluid={[
         data.mobileImage.childImageSharp.fluid,
         {

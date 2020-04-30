@@ -53,7 +53,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Bonjour Albert,</h1>
+      <h1>Bonjour,</h1>
       <p>Runtime Data: Star count for the Gatsby repo {starsCount}</p>
       <FontAwesomeIcon icon={faReact} />
       <p>Bienvenue sur mon blog.</p>
