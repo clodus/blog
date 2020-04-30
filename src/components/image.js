@@ -44,7 +44,7 @@ const Image = () => {
           media: `(min-width: 768px)`,
         },
       ]}
-      alt="Clodus"
+      alt="Clodus!!!"
       draggable={false}
       loading="auto"
     />
