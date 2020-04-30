@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
+import Layout from '../components/layout';
 
 const AboutPage = () => (
   <Layout>
@@ -9,5 +9,5 @@ const AboutPage = () => (
       <p>Welcome to my Gatsby site.</p>
     </main>
   </Layout>
-)
-export default AboutPage
+);
+export default AboutPage;

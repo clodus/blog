@@ -1,3 +1,5 @@
-import React from "react"
+import React from 'react';
 
-export default ({ pageContext: { dog } }) => <section>{dog.name}</section>
+const DogTemplate = ({ pageContext: { dog } }) => <section>{dog.name}</section>;
+
+export default DogTemplate;

@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout';
+import Image from '../components/image';
+import SEO from '../components/seo';
 
-import style from "./index.module.scss"
+import style from './index.module.scss';
 
-import styled from "styled-components"
+import styled from 'styled-components';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReact } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
 
 const Container = styled.div`
   margin: 3rem auto;
@@ -19,36 +19,36 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+`;
 const Avatar = styled.img`
   flex: 0 0 96px;
   width: 96px;
   height: 96px;
   margin: 0;
-`
+`;
 const Username = styled.h2`
   margin: 0 0 12px 0;
   padding: 0;
-`
+`;
 
-const User = props => (
+const User = (props) => (
   <>
     <Avatar src={props.avatar} alt={props.username} />
     <Username>{props.username}</Username>
   </>
-)
+);
 
 const IndexPage = () => {
   // Querying data client-side with fetch
-  const [starsCount, setStarsCount] = useState(0)
+  const [starsCount, setStarsCount] = useState(0);
   useEffect(() => {
     // get data from GitHub api
     fetch(`https://api.github.com/repos/gatsbyjs/gatsby`)
-      .then(response => response.json()) // parse JSON from request
-      .then(resultData => {
-        setStarsCount(resultData.stargazers_count)
-      }) // set data for the number of stars
-  }, [])
+      .then((response) => response.json()) // parse JSON from request
+      .then((resultData) => {
+        setStarsCount(resultData.stargazers_count);
+      }); // set data for the number of stars
+  }, []);
 
   return (
     <Layout>
@@ -72,6 +72,6 @@ const IndexPage = () => {
       </section>
       <img src={`lion.jpg`} alt="me" />
     </Layout>
-  )
-}
-export default IndexPage
+  );
+};
+export default IndexPage;
