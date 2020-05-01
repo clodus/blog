@@ -8,14 +8,15 @@ module.exports = {
   pathPrefix: '/blog',
 
   siteMetadata: {
-    title: `Clodus - Blog`,
-    description: `Blog, great blog Clodus. This blog claims to be the better.`,
+    title: `Clodus`,
+    description: `Un blog de Claude Traglia sur les développements et technologies web.`,
     author: `@clodus`,
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

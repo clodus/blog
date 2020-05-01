@@ -13,6 +13,8 @@ import Img from 'gatsby-image';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+const src = 'clodus-xs.png';
+
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
